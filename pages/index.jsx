@@ -1,5 +1,6 @@
+import Link from 'next/link';
 import Image from 'next/image';
-import { Inter } from 'next/font/google';
+import { Icon } from '@iconify/react';
 
 export default function Home() {
   return (
@@ -16,8 +17,43 @@ export default function Home() {
               </button>
             </div>
 
-            
+            <div className="flex gap-3 items-center">
+              <select
+                name="country"
+                id="country"
+                className="bg-secondary-100 text-white text-xs focus:outline-none"
+              >
+                <option value="1">USD</option>
+                <option value="2">BD</option>
+              </select>
+              <select
+                name="lang"
+                id="lang"
+                className="bg-secondary-100 text-white text-xs focus:outline-none"
+              >
+                <option value="1">English</option>
+                <option value="2">Bangla</option>
+              </select>
 
+              <Link href="/">
+                <Icon icon="mdi:twitter" color="white" className='hover:scale-110 duration-300'/>
+              </Link>
+              <Link href="/">
+              <Icon icon="ps:linkedin" color="white" width='14' height="14" className='hover:scale-110 duration-300' />
+              </Link>
+              <Link href="/">
+              <Icon icon="ant-design:google-plus-outlined" color="white" width='18' height="18" className='hover:scale-110 duration-300' />
+              </Link>
+              <Link href="/">
+              <Icon icon="cib:pinterest-p" color="white" width='14' height="14" className='hover:scale-110 duration-300' />
+              </Link>
+              <Link href="/">
+              <Icon icon="mdi:instagram" color="white" className='hover:scale-110 duration-300' />
+              </Link>
+              <Link href="/">
+              <Icon icon="carbon:logo-facebook" color="white" className='hover:scale-110 duration-300' />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
